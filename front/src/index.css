@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.Mui-selected{
+  color: #f2c684 !important;
+}
+.Mui-selected:hover{
+  color: #fff ;
+}
+.MuiTab-root:hover{
+  background-color: #f2c684;
+  color: #fff !important;
+}
+.btn-vote{
+  height: 45px;
+  width: 100px;
+  font-weight: bold;
+  background-color: #f2c684;
+  color: #fff;
+  margin: 25px;
+}
+.btn-vote:hover{
+  background-color: #fff;
+  color: #f2c684;
+  border-color: black;
+}
+
+.btn-connect{
+  position: absolute;
+  top: 7px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-connect:hover{
+  color: #f2c684;
+  cursor: pointer;
+}
+.css-17yyzkl{
+ width: auto !important;
+}
+.h3{
+  text-decoration: underline;
+}
