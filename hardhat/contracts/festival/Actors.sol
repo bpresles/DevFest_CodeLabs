@@ -6,13 +6,20 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+/// @title Management of Actor
+/// @Author Colas Vincent
+/// @notice Smart contract to generate digital actors for the festival.
 contract Actors is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
+    /// @notice Event when token generated
     event ActorMinted(uint tokenId);
 
     constructor(string memory name, string memory symbol) ERC721(name, symbol){
     }
 
+    /// @notice Mint a new actor.
+    /// @param _tokenURI The token URI.
+    /// @emit ActorMinted event when actor is minted.
     function mint(string memory _tokenURI) external onlyOwner{
         uint tokenId = totalSupply() +1;
         _safeMint(owner(), tokenId);

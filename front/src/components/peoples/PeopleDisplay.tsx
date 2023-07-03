@@ -11,7 +11,7 @@ interface PeopleDisplayProps {
 }
 
 const PeopleDisplay = ({tokenId, type}: PeopleDisplayProps  ) => {
-    const [actorImage, setActorImage] = useState('');
+    const [peopleImage, setPeopleImage] = useState('');
     const [metadata, setMetadata]: any = useState();
 
     useEffect(() => {
@@ -39,18 +39,19 @@ const PeopleDisplay = ({tokenId, type}: PeopleDisplayProps  ) => {
 
                     if (data.image) {
                         const imageContent = await ipfsGetContent(data.attributes[2].value)
-                        setActorImage(uint8ArrayToString(imageContent, 'base64'))
+                        setPeopleImage(uint8ArrayToString(imageContent, 'base64'))
                     }
                 }
             })()
         }
-    }, [actorImage, setActorImage, tokenId])
+    }, [peopleImage, setPeopleImage, tokenId])
 
     return (
         <div style={{margin: 'auto', width: 200}}>
-            {tokenId && actorImage &&
+            {tokenId > 0 && peopleImage &&
                 <div>
-                    <img src={`data:image/*;base64,${actorImage}`} alt="card" style={{height: '200px'}}/>
+                    <h3>Apercu :</h3>
+                    <img src={`data:image/*;base64,${peopleImage}`} alt="card" style={{height: '200px'}}/>
                     <p>{metadata.attributes[0].value} {metadata.attributes[1].value}</p>
                 </div>
             }

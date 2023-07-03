@@ -22,3 +22,28 @@ export interface PeopleMetadata {
         }
     ]
 }
+
+export interface MovieMetadata {
+    "description": string;
+    "external_url": string;
+    "image": string;
+    "name": string;
+    "attributes": [
+        {
+            "trait_type": "Title",
+            "value": string;
+        },
+        {
+            "trait_type": "Description",
+            "value": string;
+        },
+        {
+            "trait_type": "Picture",
+            "value": string;
+        },
+        {
+            "trait_type": "TokenIdDirector",
+            "value": number;
+        }
+    ]
+}

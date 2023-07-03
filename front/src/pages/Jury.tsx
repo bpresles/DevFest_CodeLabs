@@ -1,4 +1,4 @@
-import PeopleCard from "../components/People/PeopleCard.tsx";
+import PeopleCard from "../components/peoples/PeopleCard.tsx";
 
 const Jury = () => {
 

@@ -6,10 +6,15 @@ import "../../styles/formBlock.css";
 import ipfs from "../common/ipfs.ts";
 import {PeopleMetadata} from "../../types/Metadata.ts";
 import PeopleDisplay from "./PeopleDisplay.tsx";
+import {AlertColor} from "@mui/material";
+import SnackbarAlert from "../common/SnackbarAlert.tsx";
 
 const PeopleGenerator = () => {
-    const [transactionSuccess, setTransactionSuccess] = useState(false);
-    const [transactionError, setTransactionError] = useState(false);
+    const [mitting, setMitting] = useState(false);
+
+    const [open, setOpen] = useState(false)
+    const [message, setMessage] = useState('')
+    const [severity, setSeverity] = useState<AlertColor | undefined>('success')
 
     const [type, setType]: any = useState(0);
     const [Lastname, setLastname]: any = useState('');
@@ -25,6 +30,7 @@ const PeopleGenerator = () => {
      * @param tokenURI
      */
     async function mintPeople(tokenURI: string) {
+        setMitting(true);
         const signer = await provider?.getSigner();
         let transaction;
         let contract;
@@ -39,7 +45,7 @@ const PeopleGenerator = () => {
         }
 
         // récuperation de l'id du token minté
-        contract.on('*', (event) => {
+        await contract.on('*', (event) => {
             if(event.eventName === 'ActorMinted' || event.eventName === 'DirectorMinted'){
                 const id = ethers.toNumber(event.args[0]);
                 setTokenId(id);
@@ -54,21 +60,137 @@ const PeopleGenerator = () => {
                 setPicture('');
                 setAddress('');
                 setType(0);
-                setTransactionSuccess(true);
+                setMessage(`Minting in success`)
+                setSeverity('success')
+                setOpen(true)
                 setTimeout(
                     function () {
-                        setTransactionSuccess(false)
+                        setOpen(false)
                     }, 5000);
             }
         }).catch((err: any) => {
             if (err) {
-                setTransactionError(true);
+                setMitting(false);
+                setMessage(`Minting in error`)
+                setSeverity('error')
+                setOpen(true)
                 setTimeout(
                     function () {
-                        setTransactionError(false)
+                        setOpen(false)
                     }, 5000);
             }
         })
+
+        setMessage('Minting finished ! :)')
+        setSeverity('success')
+        setOpen(true)
+        return true;
+    }
+
+    /**
+     * Verification du formulaire avant procédure du mint NFT
+     * */
+    const verifyForm = async () => {
+        // Controle des champs
+        if (!Firstname || Firstname.length === 0) {
+            setMitting(false);
+            setMessage(`Invalide Firstname`)
+            setSeverity('error')
+            setOpen(true)
+            return false
+        }
+        if (!Lastname || Lastname.length === 0) {
+            setMitting(false);
+            setMessage(`Invalide Lastname`)
+            setSeverity('error')
+            setOpen(true)
+            return false;
+        }
+        if (!Picture) {
+            setMitting(false);
+            setMessage(`Invalide Picture`)
+            setSeverity('error')
+            setOpen(true)
+            return false;
+        }
+        if (!Address || Address.length === 0 || !ethers.isAddress(Address)) {
+            setMitting(false);
+            setMessage(`Invalide Address wallet`)
+            setSeverity('error')
+            setOpen(true)
+            return false;
+        }
+
+        // Création de l'acteur
+        const newActorInfo = {
+            Firstname,
+            Lastname,
+            Picture,
+            Address
+        }
+
+        // Upload de l'image sur ipfs
+        const PictureFile = await dataUrlToFile(`data:image/*;${newActorInfo.Picture}`)
+        const ipfsPictureUploadResult = await ipfs.add(PictureFile, {pin: true}).catch((err: Error) => {
+            setMessage(`IPFS: ${err.message}`)
+            setSeverity('error')
+            setOpen(true)
+            setMitting(false);
+        });
+
+        // création de l'uri - addresse de l'image uploadé
+        if (ipfsPictureUploadResult) {
+            const PictureUri = `ipfs://${ipfsPictureUploadResult.cid}`
+            await generateNFTMetadataAndUploadToIpfs(PictureUri, newActorInfo);
+        }
+    }
+
+    /**
+     * Génération des meta données du nft avec enregistrement sur ipfs
+     * @param PictureUri
+     * @param newActorInfo
+     */
+    const generateNFTMetadataAndUploadToIpfs = async (PictureUri: string, newActorInfo: any,) => {
+        const NFTMetaData: PeopleMetadata = {
+            "description": "People generated NFT metadata",
+            "external_url": "",
+            "image": PictureUri,
+            "name": "People DevFest",
+            "attributes": [
+                {
+                    "trait_type": "Firstname",
+                    "value": newActorInfo.Firstname
+                },
+                {
+                    "trait_type": "Lastname",
+                    "value": newActorInfo.Lastname
+                },
+                {
+                    "trait_type": "Picture",
+                    "value": PictureUri
+                },
+                {
+                    "trait_type": "Address",
+                    "value": newActorInfo.Address
+                }
+            ]
+        }
+
+        const metadataString = JSON.stringify(NFTMetaData);
+
+        // enregistrement des meta donné sur ipfs
+        const ipfsResponse = await ipfs.add(metadataString, {pin: true}).catch((err: Error) => {
+            setMessage(`IPFS: ${err.message}`)
+            setSeverity('error')
+            setOpen(true)
+            setMitting(false);
+        });
+        // création de l'addresse des meta donnée
+        if (ipfsResponse) {
+            const tokenURI = 'ipfs://' + ipfsResponse.cid;
+            await mintPeople(tokenURI);
+        }
+        setMitting(false);
     }
 
     /**
@@ -97,89 +219,6 @@ const PeopleGenerator = () => {
             console.log('Error: ', error);
         };
     };
-
-    /**
-     * Verification du formulaire avant procédure du mint NFT
-     * */
-    const verifyForm = async () => {
-        // Controle des champs
-        if (!Firstname || Firstname.length === 0) {
-            return false
-        }
-        if (!Lastname || Lastname.length === 0) {
-            return false;
-        }
-        if (!Picture) {
-            return false;
-        }
-        if (!Address || Address.length === 0 || !ethers.isAddress(Address)) {
-            return false;
-        }
-
-        // Création de l'acteur
-        const newActorInfo = {
-            Firstname,
-            Lastname,
-            Picture,
-            Address
-        }
-
-        // Upload de l'image sur ipfs
-        const PictureFile = await dataUrlToFile(`data:image/*;${newActorInfo.Picture}`)
-        const ipfsPictureUploadResult = await ipfs.add(PictureFile, {pin: true}).catch((err: Error) => {
-            console.log(err.message);
-        });
-
-        // création de l'uri - addresse de l'image uploadé
-        if (ipfsPictureUploadResult) {
-            const PictureUri = `ipfs://${ipfsPictureUploadResult.cid}`
-            await generateNFTMetadataAndUploadToIpfs(PictureUri, newActorInfo);
-        }
-    }
-
-    /**
-     * Génération des meta données du nft avec enregistrement sur ipfs
-     * @param PictureUri
-     * @param newActorInfo
-     */
-    const generateNFTMetadataAndUploadToIpfs = async (PictureUri: string, newActorInfo: any,) => {
-        const NFTMetaData: PeopleMetadata = {
-            "description": "Actor generated NFT metadata",
-            "external_url": "",
-            "image": PictureUri,
-            "name": "Actors DevFest",
-            "attributes": [
-                {
-                    "trait_type": "Firstname",
-                    "value": newActorInfo.Firstname
-                },
-                {
-                    "trait_type": "Lastname",
-                    "value": newActorInfo.Lastname
-                },
-                {
-                    "trait_type": "Picture",
-                    "value": PictureUri
-                },
-                {
-                    "trait_type": "Address",
-                    "value": newActorInfo.Address
-                }
-            ]
-        }
-
-        const metadataString = JSON.stringify(NFTMetaData);
-
-        // enregistrement des meta donné sur ipfs
-        const ipfsResponse = await ipfs.add(metadataString, {pin: true}).catch((err: Error) => {
-            console.log(err.message);
-        });
-        // création de l'addresse des meta donnée
-        if (ipfsResponse) {
-            const tokenURI = 'ipfs://' + ipfsResponse.cid;
-            await mintPeople(tokenURI);
-        }
-    }
 
     /**
      * création d'un fichier a partir d'une url base 64
@@ -237,19 +276,10 @@ const PeopleGenerator = () => {
                 </div>
             </div>
 
-            <button onClick={verifyForm}>Ajout</button>
+            <button onClick={verifyForm} disabled={mitting}>Ajout d'une nouvelle personne</button>
 
             <div>
-                {
-                    transactionSuccess
-                        ? <p style={{color: 'green'}}>Ajout avec success !</p>
-                        : null
-                }
-                {
-                    transactionError
-                        ? <p style={{color: 'red'}}>L'ajout a échoué !</p>
-                        : null
-                }
+                <SnackbarAlert open={open} setOpen={setOpen} message={message} severity={severity} />
                 <PeopleDisplay tokenId={tokenId} type={type} />
             </div>
         </section>

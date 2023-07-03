@@ -1,37 +1,21 @@
-import CardFilm from "../components/CardFilm.tsx";
+import CardFilm from "../components/movies/CardFilm.tsx";
 import {useEffect, useState} from "react";
-import {ethers} from "ethers";
-import {provider} from "../provider/providers.ts";
 import contractsInterface from "../contracts/contracts.ts";
+import {fetchMovie} from "../services/MovieService.service.ts";
 
 const Film = () => {
     const [movies, setMovies]: any = useState([]);
+    const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetchMovies();
+        fetchMovie("MovieMinted", contractsInterface.contracts.Movies.address, contractsInterface.contracts.Movies.abi, setLoading)
+            .then((films) => {
+                setMovies(films);
+                console.log(films);
+            });
     }, []);
 
-    async function fetchMovies() {
-        if(provider){
-            const contract = new ethers.Contract(contractsInterface.contracts.Movies.address, contractsInterface.contracts.Movies.abi, provider);
-            try{
-                const data = await contract.getAllMovies();
-                setMovies(data);
-                console.log(movies);
-            }catch (err) {
-                console.log(err);
-            }
-        }
-    }
-
-    const category = {
-        id: 1,
-        title: 'Les Films en compétition pour l\'accolade d\'or',
-        name: 'Film',
-        url: 'https://imgsrc.cineserie.com/2017/02/Filmandclapboard.jpg?ver=1'
-    };
-
-    const films = [
+    /*const films = [
         {
             id: 1,
             title: 'Le coeur de la Matrice: Programmation Mortelle',
@@ -208,21 +192,19 @@ const Film = () => {
                 }
             ]
         }
-    ];
+    ];*/
 
     return (
         <article>
-            <h2>{category.title}</h2>
-
+            <h2>Les Films en compétition pour l'accolade d'or</h2>
             <section>
-                {films.map((film, index) => (
+                {!isLoading && movies && movies.length > 0 && movies.map((film: any, index: number) => (
                     <CardFilm
                         key={`${film.id}-${index}`}
-                        title={film.title}
-                        description={film.description}
-                        url={film.url}
-                        director={film.director}
-                        actors={film.actors}
+                        Title={film.Title}
+                        Description={film.Description}
+                        Picture={film.Picture}
+                        TokenIdDirector={film.TokenIdDirector}
                     />
                 ))}
             </section>
