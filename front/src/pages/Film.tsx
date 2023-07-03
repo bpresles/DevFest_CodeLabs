@@ -11,7 +11,6 @@ const Film = () => {
         fetchMovie("MovieMinted", contractsInterface.contracts.Movies.address, contractsInterface.contracts.Movies.abi, setLoading)
             .then((films) => {
                 setMovies(films);
-                console.log(films);
             });
     }, []);
 
@@ -204,7 +203,7 @@ const Film = () => {
                         Title={film.Title}
                         Description={film.Description}
                         Picture={film.Picture}
-                        TokenIdDirector={film.TokenIdDirector}
+                        Director={film.Director}
                     />
                 ))}
             </section>
