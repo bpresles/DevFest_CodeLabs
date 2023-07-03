@@ -31,11 +31,14 @@ const Home = () => {
                     Les films (titre, synopsy, affiche) ainsi que les images des acteurs et des réalisateurs ont été réalisés par une IA. <br />
                     Nous vous invitons à découvrire notre univers ainsi que les nominé de chaque compétitions de l'édition 2023.</p>
                 <h4>Présentation</h4>
-                <p>Le Festival du Cinéma du DevFest a une renommée internationale et récompense les meilleures œuvres cinématographiques de la communauté des développeurs. Les organisateurs du festival ont émis le souhait de moderniser le processus de récompense en utilisant la technologie des NFT. Votre mission, si vous l'acceptez, est de réaliser cette application en permettant aux organisateurs de sélectionner les films nominés, de définir les membres du jury, d'organiser des votes par le jury et de remettre les prix aux lauréats.</p>
+                <p>Le Festival du Cinéma du DevFest a une renommée internationale et récompense les meilleures œuvres cinématographiques de la communauté des développeurs.
+                    Les organisateurs du festival ont émis le souhait de moderniser le processus de récompense en utilisant la technologie des NFT. Votre mission,
+                    si vous l'acceptez, est de réaliser cette application en permettant aux organisateurs de sélectionner les films nominés,
+                    de définir les membres du jury, d'organiser des votes par le jury et de remettre les prix aux lauréats.</p>
             </div>
 
-            <h5>Une idée original de : </h5>
             <section style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <h5>Une idée original de : </h5>
                 <div style={{margin: '25px'}}>
                     <img src="/logo_bs.png" alt="logo blockchain et société" height='auto' width='130' />
                 </div>

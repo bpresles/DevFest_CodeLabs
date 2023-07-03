@@ -1,4 +1,4 @@
-import PeopleCard from "../components/People/PeopleCard.tsx";
+import PeopleCard from "../components/peoples/PeopleCard.tsx";
 import {useEffect, useState} from "react";
 import contractsInterface from "../contracts/contracts.ts";
 import {fetchPeople} from "../services/PeopleService.service.ts";

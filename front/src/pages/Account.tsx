@@ -1,13 +1,16 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "../styles/account.css";
-import PeopleGenerator from "../components/People/PeopleGenerator.tsx";
-import BlockAddMovie from "../components/BlockAddMovie.tsx";
+import PeopleGenerator from "../components/peoples/PeopleGenerator.tsx";
+import MovieGenerator from "../components/movies/MovieGenerator.tsx";
 
 const Account = () => {
     const [connectedUserAddress, setConnectedUserAddress] = useState('');
     const [addPeople, setAddPeople] = useState(false);
     const [addMovie, setAddMovie] = useState(false);
-    requestAccount();
+
+    useEffect(() => {
+        requestAccount();
+    }, []);
 
     async function requestAccount() {
         const account = await window.ethereum.request({method: 'eth_requestAccounts'});
@@ -29,7 +32,7 @@ const Account = () => {
                 }
                 {
                     addMovie
-                    ? <BlockAddMovie />
+                    ? <MovieGenerator />
                     : null
                 }
                 <p></p>
