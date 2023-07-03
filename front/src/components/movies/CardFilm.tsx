@@ -2,11 +2,12 @@ interface CardFilmProps{
     Title: string,
     Description: string,
     Picture: string,
-    TokenIdDirector: number,
+    Director: {
+        Firstname: string,
+        Lastname: string
+    },
 }
-function CardFilm({Title, Description, Picture, TokenIdDirector}: CardFilmProps){
-
-    // Récupération du réalisateur
+function CardFilm({Title, Description, Picture, Director}: CardFilmProps){
 
     return (
         <div style={{ display: 'flex', padding: 15, justifyContent: 'space-around'}}>
@@ -18,7 +19,7 @@ function CardFilm({Title, Description, Picture, TokenIdDirector}: CardFilmProps)
                 <p>{Description}</p>
                 <div style={{display: 'flex'}}>
                     <p style={{fontWeight: 'bold', marginRight: '5px'}}>Réalisateur :</p>
-                    <p>{TokenIdDirector}</p>
+                    <p>{Director.Firstname} {Director.Lastname}</p>
                 </div>
             </div>
         </div>

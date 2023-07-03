@@ -2,6 +2,7 @@ import {provider} from "../provider/providers.ts";
 import {ethers, EventLog} from "ethers";
 import {ipfsGetContent} from "../components/common/ipfs.ts";
 import {toString as uint8ArrayToString} from "uint8arrays/to-string";
+import contractsInterface from "../contracts/contracts.ts";
 
 export async function fetchMovie(eventType: string, contractAddress: string, contractAbi: any, setLoading: Function) {
     setLoading(true);
@@ -26,12 +27,21 @@ export async function fetchMovie(eventType: string, contractAddress: string, con
                     const metadataString = await ipfsGetContent(tokenUri)
                     const data = JSON.parse(uint8ArrayToString(metadataString, 'utf8'))
 
+                    // récuperation du réalisateur
+                    const contractDirector = new ethers.Contract(contractsInterface.contracts.Directors.address, contractsInterface.contracts.Directors.abi, provider);
+                    const tokenUriDirector = await contractDirector.tokenURI(data.attributes[3].value);
+                    const metaDataStringDirector = await ipfsGetContent(tokenUriDirector)
+                    const dataDirector = JSON.parse(uint8ArrayToString(metaDataStringDirector, 'utf8'))
+
                     const movie = {
                         id: id,
                         Title: data.attributes[0].value,
                         Description: data.attributes[1].value,
                         Picture: data.attributes[2].value.replace('ipfs://', 'https://ipfs.io/ipfs/'),
-                        TokenIdDirector: data.attributes[3].value
+                        Director: {
+                            Firstname: dataDirector.attributes[0].value,
+                            Lastname: dataDirector.attributes[1].value
+                        }
                     }
                     movies.push(movie);
                 }
