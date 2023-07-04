@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title Management of Movies
-/// @Author Colas Vincent
+/// @author Colas Vincent
 /// @notice Smart contract to generate digital movie for the festival.
 contract Movies is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable{
 
@@ -18,8 +18,8 @@ contract Movies is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable{
     }
 
     /// @notice Mint a new movie.
+    /// @dev event MovieMinted when movie is minted.
     /// @param _tokenURI The token URI.
-    /// @emit MovieMinted event when movie is minted.
     function mint(string memory _tokenURI) external onlyOwner{
         uint tokenId = totalSupply() +1;
         _safeMint(owner(), tokenId);

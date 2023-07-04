@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title Management of Director
-/// @Author Colas Vincent
+/// @author Colas Vincent
 /// @notice Smart contract to generate digital directors for the festival.
 contract Directors is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
@@ -18,8 +18,8 @@ contract Directors is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     }
 
     /// @notice Mint a new director.
+    /// @dev event DirectorMinted when director is minted.
     /// @param _tokenURI The token URI.
-    /// @emit DirectorMinted event when director is minted.
     function mint(string memory _tokenURI) external onlyOwner{
         uint tokenId = totalSupply() +1;
         _safeMint(owner(), tokenId);

@@ -29,6 +29,12 @@ const contractDeploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) =>
     args: ["DevFest Movies","DFM"],
     log: true
   });
+
+  await deploy('Competitions', {
+    contract: 'Competitions',
+    from: deployer,
+    log: true
+  });
 };
 export default contractDeploy;
-contractDeploy.tags = ['Actors', 'Directors', 'Movies']
+contractDeploy.tags = ['Actors', 'Directors', 'Movies', 'Competitions']
