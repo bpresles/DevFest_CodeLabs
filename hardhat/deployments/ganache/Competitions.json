@@ -1,0 +1,511 @@
+{
+  "address": "0xB3134179369B5C5cAa5E715b1110D61a8debBB09",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "competitionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "CompetitionSessionRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "competitionId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "vote",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "voices",
+          "type": "uint256"
+        }
+      ],
+      "name": "Voted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_jury",
+          "type": "address[]"
+        },
+        {
+          "internalType": "string",
+          "name": "_title",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_idsOption",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "enum Competitions.TypeCompetitions",
+          "name": "_typeCompetitions",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_startDate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_endDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "addCompetition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_competitionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVoterStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_competitionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVotingCompetitionStatus",
+      "outputs": [
+        {
+          "internalType": "enum Competitions.VotingCompetitionStatus",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_competitionId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenIdOption",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteOnCompetition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x94f9585e7d0801bfae95e02b4de7265dc8251c2654056c0dcd68e9a3a8686f24",
+  "receipt": {
+    "to": null,
+    "from": "0xAfD947F8aD1546e779529e6906D580e62F489928",
+    "contractAddress": "0xB3134179369B5C5cAa5E715b1110D61a8debBB09",
+    "transactionIndex": 0,
+    "gasUsed": "1863103",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000000000000000000000800000200000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000200000000000000000000000000020000000000000000800000000000000000000000000000000000000000000000000",
+    "blockHash": "0x440f41442a9a23136368b41d9f719575dd9584f01ab0a4bb9905b25d3aaebf08",
+    "transactionHash": "0x94f9585e7d0801bfae95e02b4de7265dc8251c2654056c0dcd68e9a3a8686f24",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 88,
+        "transactionHash": "0x94f9585e7d0801bfae95e02b4de7265dc8251c2654056c0dcd68e9a3a8686f24",
+        "address": "0xB3134179369B5C5cAa5E715b1110D61a8debBB09",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000afd947f8ad1546e779529e6906d580e62f489928"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x440f41442a9a23136368b41d9f719575dd9584f01ab0a4bb9905b25d3aaebf08"
+      }
+    ],
+    "blockNumber": 88,
+    "cumulativeGasUsed": "1863103",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "fb8ad64fd8dfad565b63da9282f8eaa2",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"competitionId\",\"type\":\"uint256\"}],\"name\":\"CompetitionSessionRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"competitionId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"vote\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"voices\",\"type\":\"uint256\"}],\"name\":\"Voted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_jury\",\"type\":\"address[]\"},{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"uint256[]\",\"name\":\"_idsOption\",\"type\":\"uint256[]\"},{\"internalType\":\"enum Competitions.TypeCompetitions\",\"name\":\"_typeCompetitions\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"_startDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_endDate\",\"type\":\"uint256\"}],\"name\":\"addCompetition\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_competitionId\",\"type\":\"uint256\"}],\"name\":\"getVoterStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_competitionId\",\"type\":\"uint256\"}],\"name\":\"getVotingCompetitionStatus\",\"outputs\":[{\"internalType\":\"enum Competitions.VotingCompetitionStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_competitionId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_tokenIdOption\",\"type\":\"uint256\"}],\"name\":\"voteOnCompetition\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Colas Vincent\",\"kind\":\"dev\",\"methods\":{\"addCompetition(address[],string,uint256[],uint8,uint256,uint256)\":{\"details\":\"Administrator defines voting period, competition, voting panel and options. event CompetitionSessionRegistered when competition has been registered\",\"params\":{\"_endDate\":\"End date of voting session.\",\"_idsOption\":\"List of ids in competition (film, actor, director).\",\"_jury\":\"List of voting juries.\",\"_startDate\":\"Voting session start date.\",\"_title\":\"Competition title.\",\"_typeCompetitions\":\"Defines the type of options.\"}},\"getVoterStatus(uint256)\":{\"params\":{\"_competitionId\":\"The voting competition identifier.\"},\"returns\":{\"_0\":\"True if msg.sender has already voted on this competition id.\"}},\"getVotingCompetitionStatus(uint256)\":{\"params\":{\"_competitionId\":\"The voting competition number.\"},\"returns\":{\"_0\":\"The voting competition status.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"voteOnCompetition(uint256,uint256)\":{\"details\":\"Voting is only possible if the timestamp of the current block is between startTime and endTime of the session and if the voter's address is in the list. event Voted when jury has been voted\",\"params\":{\"_competitionId\":\"The voting competition on which the voter wants to vote.\",\"_tokenIdOption\":\"The token id of the option chosen by the voter.\"}}},\"title\":\"Management of Competition\",\"version\":1},\"userdoc\":{\"events\":{\"CompetitionSessionRegistered(uint256)\":{\"notice\":\"Event\"}},\"kind\":\"user\",\"methods\":{\"addCompetition(address[],string,uint256[],uint8,uint256,uint256)\":{\"notice\":\"Adds a voting session for a competition.\"},\"getVoterStatus(uint256)\":{\"notice\":\"Returns whether the user has voted on the voting competition.\"},\"getVotingCompetitionStatus(uint256)\":{\"notice\":\"Gets the voting competition status according to the current timestamp.\"},\"voteOnCompetition(uint256,uint256)\":{\"notice\":\"Allows you to vote for an option in a competition during a voting session.\"}},\"notice\":\"Smart contract to management digital Competition for the festival.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/competition/Competitions.sol\":\"Competitions\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xba43b97fba0d32eb4254f6a5a297b39a19a247082a02d6e69349e071e2946218\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/competition/Competitions.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\r\\n\\r\\n/// @title Management of Competition\\r\\n/// @author Colas Vincent\\r\\n/// @notice Smart contract to management digital Competition for the festival.\\r\\ncontract Competitions is Ownable {\\r\\n\\r\\n    /// @notice Enum of type competition.\\r\\n    enum  TypeCompetitions {\\r\\n        Actor,\\r\\n        Director,\\r\\n        Movie\\r\\n    }\\r\\n\\r\\n    /// @notice Structure of option competition\\r\\n    struct Option {\\r\\n        uint tokenId;\\r\\n        uint voteCount;\\r\\n    }\\r\\n\\r\\n    /// @notice Voter structure\\r\\n    struct Voter {\\r\\n        address voter;\\r\\n        bool hasVoted;\\r\\n    }\\r\\n\\r\\n    /// @notice Voting competition structure to store a voting competition details.\\r\\n    struct CompetitionVotingSession {\\r\\n        uint id;\\r\\n        string title;\\r\\n        TypeCompetitions typeCompetitions;\\r\\n        uint startTime;\\r\\n        uint endTime;\\r\\n    }\\r\\n\\r\\n    /// @notice Enum with the possible status for a competition session.\\r\\n    enum  VotingCompetitionStatus {\\r\\n        Pending,\\r\\n        InProgress,\\r\\n        Ended\\r\\n    }\\r\\n\\r\\n    CompetitionVotingSession[] votingCompetitions;\\r\\n    mapping (uint => mapping(address => Voter)) votingCompetitionsVoters;\\r\\n    mapping (uint => address[]) jurysByCompetition;\\r\\n    mapping (uint => Option[]) optionsByCompetition;\\r\\n\\r\\n    /// Event\\r\\n    event CompetitionSessionRegistered(uint competitionId);\\r\\n    event Voted(uint competitionId, bool vote, uint voices);\\r\\n\\r\\n    /// @notice Adds a voting session for a competition.\\r\\n    /// @dev Administrator defines voting period, competition, voting panel and options. event CompetitionSessionRegistered when competition has been registered\\r\\n    /// @param _jury List of voting juries.\\r\\n    /// @param _title Competition title.\\r\\n    /// @param _idsOption List of ids in competition (film, actor, director).\\r\\n    /// @param _typeCompetitions Defines the type of options.\\r\\n    /// @param _startDate Voting session start date.\\r\\n    /// @param _endDate End date of voting session.\\r\\n    function addCompetition(address[] memory _jury, string memory _title, uint[] memory _idsOption, TypeCompetitions _typeCompetitions, uint _startDate, uint _endDate) external onlyOwner {\\r\\n        require(_startDate > block.timestamp, \\\"Your competition can't be in the past\\\");\\r\\n        require(_startDate < _endDate, \\\"Your competition end date can't be before the start date\\\");\\r\\n        require(keccak256(abi.encode(_title)) != keccak256(abi.encode(\\\"\\\")), \\\"Your competition can't be empty\\\");\\r\\n        require(_jury.length >= 2, \\\"Your competition must contain jurys\\\");\\r\\n        require(_idsOption.length >= 4, \\\"Your competition must contain at least 4 options\\\");\\r\\n        require(keccak256(abi.encode(_typeCompetitions)) != keccak256(abi.encode(\\\"\\\")), \\\"Your competition must contain type of competition\\\");\\r\\n\\r\\n        uint tokenId = votingCompetitions.length +1;\\r\\n\\r\\n        CompetitionVotingSession memory newCompetitionVotingSession = CompetitionVotingSession(tokenId, _title, _typeCompetitions, _startDate, _endDate);\\r\\n\\r\\n        votingCompetitions.push(newCompetitionVotingSession);\\r\\n\\r\\n        for(uint i = 0; i < _jury.length; i++){\\r\\n            jurysByCompetition[tokenId].push(_jury[i]);\\r\\n        }\\r\\n\\r\\n        for(uint i = 0; i < _idsOption.length; i++){\\r\\n            Option memory newOption = Option(_idsOption[i], 0);\\r\\n            optionsByCompetition[tokenId].push(newOption);\\r\\n        }\\r\\n\\r\\n        emit CompetitionSessionRegistered(tokenId);\\r\\n    }\\r\\n\\r\\n    /// @notice Gets the voting competition status according to the current timestamp.\\r\\n    /// @param _competitionId The voting competition number.\\r\\n    /// @return The voting competition status.\\r\\n    function getVotingCompetitionStatus(uint _competitionId) external view returns (VotingCompetitionStatus){\\r\\n        require(_competitionId <= votingCompetitions.length, \\\"Competition: Voting competition doesn't exist\\\");\\r\\n\\r\\n        if (votingCompetitions[_competitionId].startTime > block.timestamp) {\\r\\n            return VotingCompetitionStatus.Pending;\\r\\n        }\\r\\n        else if (votingCompetitions[_competitionId].endTime < block.timestamp) {\\r\\n            return VotingCompetitionStatus.Ended;\\r\\n        }\\r\\n\\r\\n        return VotingCompetitionStatus.InProgress;\\r\\n    }\\r\\n\\r\\n    /// @notice Returns whether the user has voted on the voting competition.\\r\\n    /// @param _competitionId The voting competition identifier.\\r\\n    /// @return True if msg.sender has already voted on this competition id.\\r\\n    function getVoterStatus(uint _competitionId) external view returns(bool) {\\r\\n        require(_competitionId <= votingCompetitions.length, \\\"Competition: Voting competition doesn't exist\\\");\\r\\n        require(controleJuryByCompetition(_competitionId), \\\"Competition: Doesn't access voting\\\");\\r\\n\\r\\n        return votingCompetitionsVoters[_competitionId][msg.sender].hasVoted;\\r\\n    }\\r\\n\\r\\n    /// @notice Checking whether a jury has access to a competition\\r\\n    /// @param _competitionId The competition identifier.\\r\\n    /// @return True if the msg.sender has access to this competition.\\r\\n    function controleJuryByCompetition(uint _competitionId)internal view returns(bool){\\r\\n        bool contain = false;\\r\\n\\r\\n        for(uint i = 0; i < jurysByCompetition[_competitionId].length; i++){\\r\\n            if(jurysByCompetition[_competitionId][i] == _msgSender()){\\r\\n                contain = true;\\r\\n            }\\r\\n        }\\r\\n        return contain;\\r\\n    }\\r\\n\\r\\n    /// @notice Allows you to vote for an option in a competition during a voting session.\\r\\n    /// @dev Voting is only possible if the timestamp of the current block is between startTime and endTime of the session and if the voter's address is in the list. event Voted when jury has been voted\\r\\n    /// @param _competitionId The voting competition on which the voter wants to vote.\\r\\n    /// @param _tokenIdOption The token id of the option chosen by the voter.\\r\\n    function voteOnCompetition(uint _competitionId, uint _tokenIdOption) external {\\r\\n        require(_competitionId <= votingCompetitions.length, \\\"Competition: Voting competition doesn't exist\\\");\\r\\n        require(controleJuryByCompetition(_competitionId), \\\"Competition: Doesn't access voting\\\");\\r\\n        require(votingCompetitions[_competitionId].startTime < block.timestamp, \\\"Voting competition isn't open yet\\\");\\r\\n        require(votingCompetitionsVoters[_competitionId][msg.sender].hasVoted == false, \\\"You have already voted\\\");\\r\\n        uint nbVote;\\r\\n\\r\\n        for(uint i = 0; i < optionsByCompetition[_competitionId].length; i++ ){\\r\\n            if(optionsByCompetition[_competitionId][i].tokenId == _tokenIdOption){\\r\\n                optionsByCompetition[_competitionId][i].voteCount++;\\r\\n                nbVote = optionsByCompetition[_competitionId][i].voteCount;\\r\\n            }\\r\\n        }\\r\\n\\r\\n        votingCompetitionsVoters[_competitionId][msg.sender] = Voter(msg.sender, true);\\r\\n\\r\\n        emit Voted(_competitionId, true, nbVote);\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0x2326ad7019b5ba03fe05a7c5e21406dc95bb8c9772b28028bc46c324a4c1e78b\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061002d61002261003260201b60201c565b61003a60201b60201c565b6100fe565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b61206c806200010e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063715018a61161005b578063715018a6146100ea5780638da5cb5b146100f4578063c23467df14610112578063f2fde38b146101425761007d565b80630f59e0451461008257806313a3deac1461009e57806333301ca0146100ce575b600080fd5b61009c60048036038101906100979190610eac565b61015e565b005b6100b860048036038101906100b39190610eec565b610522565b6040516100c59190610f34565b60405180910390f35b6100e860048036038101906100e391906112a3565b61061c565b005b6100f2610ac5565b005b6100fc610ad9565b6040516101099190611393565b60405180910390f35b61012c60048036038101906101279190610eec565b610b02565b6040516101399190611425565b60405180910390f35b61015c60048036038101906101579190611440565b610bc2565b005b6001805490508211156101a6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161019d906114f0565b60405180910390fd5b6101af82610c45565b6101ee576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016101e590611582565b60405180910390fd5b4260018381548110610203576102026115a2565b5b90600052602060002090600502016003015410610255576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161024c90611643565b60405180910390fd5b600015156002600084815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160149054906101000a900460ff161515146102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102f3906116af565b60405180910390fd5b600080600090505b60046000858152602001908152602001600020805490508110156103f85782600460008681526020019081526020016000208281548110610348576103476115a2565b5b906000526020600020906002020160000154036103e557600460008581526020019081526020016000208181548110610384576103836115a2565b5b906000526020600020906002020160010160008154809291906103a6906116fe565b91905055506004600085815260200190815260200160002081815481106103d0576103cf6115a2565b5b90600052602060002090600202016001015491505b80806103f0906116fe565b915050610304565b5060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff168152602001600115158152506002600085815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160000160146101000a81548160ff0219169083151502179055509050507f5106bdd0422307bd438b00b9333cf8b4c353184cc25ad2d3e73528a6b9f5792e8360018360405161051593929190611755565b60405180910390a1505050565b600060018054905082111561056c576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610563906114f0565b60405180910390fd5b61057582610c45565b6105b4576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016105ab90611582565b60405180910390fd5b6002600083815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160149054906101000a900460ff169050919050565b610624610d18565b428211610666576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161065d906117fe565b60405180910390fd5b8082106106a8576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161069f90611890565b60405180910390fd5b6040516020016106b7906118d6565b60405160208183030381529060405280519060200120856040516020016106de9190611964565b6040516020818303038152906040528051906020012003610734576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161072b906119d2565b60405180910390fd5b600286511015610779576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161077090611a64565b60405180910390fd5b6004845110156107be576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016107b590611af6565b60405180910390fd5b6040516020016107cd906118d6565b60405160208183030381529060405280519060200120836040516020016107f49190611b5e565b604051602081830303815290604052805190602001200361084a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161084190611beb565b60405180910390fd5b60006001808054905061085d9190611c0b565b905060006040518060a0016040528083815260200188815260200186600281111561088b5761088a6113ae565b5b815260200185815260200184815250905060018190806001815401808255809150506001900390600052602060002090600502016000909190919091506000820151816000015560208201518160010190816108e79190611e4b565b5060408201518160020160006101000a81548160ff02191690836002811115610913576109126113ae565b5b02179055506060820151816003015560808201518160040155505060005b88518110156109db57600360008481526020019081526020016000208982815181106109605761095f6115a2565b5b60200260200101519080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080806109d3906116fe565b915050610931565b5060005b8651811015610a835760006040518060400160405280898481518110610a0857610a076115a2565b5b60200260200101518152602001600081525090506004600085815260200190815260200160002081908060018154018082558091505060019003906000526020600020906002020160009091909190915060008201518160000155602082015181600101555050508080610a7b906116fe565b9150506109df565b507f344aaa0824cf73b2022c14c29679b30550254276677ba83187b03ca860f029de82604051610ab39190611f1d565b60405180910390a15050505050505050565b610acd610d18565b610ad76000610d96565b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600180549050821115610b4c576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610b43906114f0565b60405180910390fd5b4260018381548110610b6157610b606115a2565b5b9060005260206000209060050201600301541115610b825760009050610bbd565b4260018381548110610b9757610b966115a2565b5b9060005260206000209060050201600401541015610bb85760029050610bbd565b600190505b919050565b610bca610d18565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610c39576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c3090611faa565b60405180910390fd5b610c4281610d96565b50565b6000806000905060005b6003600085815260200190815260200160002080549050811015610d0e57610c75610e5a565b73ffffffffffffffffffffffffffffffffffffffff16600360008681526020019081526020016000208281548110610cb057610caf6115a2565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1603610cfb57600191505b8080610d06906116fe565b915050610c4f565b5080915050919050565b610d20610e5a565b73ffffffffffffffffffffffffffffffffffffffff16610d3e610ad9565b73ffffffffffffffffffffffffffffffffffffffff1614610d94576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610d8b90612016565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b610e8981610e76565b8114610e9457600080fd5b50565b600081359050610ea681610e80565b92915050565b60008060408385031215610ec357610ec2610e6c565b5b6000610ed185828601610e97565b9250506020610ee285828601610e97565b9150509250929050565b600060208284031215610f0257610f01610e6c565b5b6000610f1084828501610e97565b91505092915050565b60008115159050919050565b610f2e81610f19565b82525050565b6000602082019050610f496000830184610f25565b92915050565b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610f9d82610f54565b810181811067ffffffffffffffff82111715610fbc57610fbb610f65565b5b80604052505050565b6000610fcf610e62565b9050610fdb8282610f94565b919050565b600067ffffffffffffffff821115610ffb57610ffa610f65565b5b602082029050602081019050919050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061103c82611011565b9050919050565b61104c81611031565b811461105757600080fd5b50565b60008135905061106981611043565b92915050565b600061108261107d84610fe0565b610fc5565b905080838252602082019050602084028301858111156110a5576110a461100c565b5b835b818110156110ce57806110ba888261105a565b8452602084019350506020810190506110a7565b5050509392505050565b600082601f8301126110ed576110ec610f4f565b5b81356110fd84826020860161106f565b91505092915050565b600080fd5b600067ffffffffffffffff82111561112657611125610f65565b5b61112f82610f54565b9050602081019050919050565b82818337600083830152505050565b600061115e6111598461110b565b610fc5565b90508281526020810184848401111561117a57611179611106565b5b61118584828561113c565b509392505050565b600082601f8301126111a2576111a1610f4f565b5b81356111b284826020860161114b565b91505092915050565b600067ffffffffffffffff8211156111d6576111d5610f65565b5b602082029050602081019050919050565b60006111fa6111f5846111bb565b610fc5565b9050808382526020820190506020840283018581111561121d5761121c61100c565b5b835b8181101561124657806112328882610e97565b84526020840193505060208101905061121f565b5050509392505050565b600082601f83011261126557611264610f4f565b5b81356112758482602086016111e7565b91505092915050565b6003811061128b57600080fd5b50565b60008135905061129d8161127e565b92915050565b60008060008060008060c087890312156112c0576112bf610e6c565b5b600087013567ffffffffffffffff8111156112de576112dd610e71565b5b6112ea89828a016110d8565b965050602087013567ffffffffffffffff81111561130b5761130a610e71565b5b61131789828a0161118d565b955050604087013567ffffffffffffffff81111561133857611337610e71565b5b61134489828a01611250565b945050606061135589828a0161128e565b935050608061136689828a01610e97565b92505060a061137789828a01610e97565b9150509295509295509295565b61138d81611031565b82525050565b60006020820190506113a86000830184611384565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b600381106113ee576113ed6113ae565b5b50565b60008190506113ff826113dd565b919050565b600061140f826113f1565b9050919050565b61141f81611404565b82525050565b600060208201905061143a6000830184611416565b92915050565b60006020828403121561145657611455610e6c565b5b60006114648482850161105a565b91505092915050565b600082825260208201905092915050565b7f436f6d7065746974696f6e3a20566f74696e6720636f6d7065746974696f6e2060008201527f646f65736e277420657869737400000000000000000000000000000000000000602082015250565b60006114da602d8361146d565b91506114e58261147e565b604082019050919050565b60006020820190508181036000830152611509816114cd565b9050919050565b7f436f6d7065746974696f6e3a20446f65736e27742061636365737320766f746960008201527f6e67000000000000000000000000000000000000000000000000000000000000602082015250565b600061156c60228361146d565b915061157782611510565b604082019050919050565b6000602082019050818103600083015261159b8161155f565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f566f74696e6720636f6d7065746974696f6e2069736e2774206f70656e20796560008201527f7400000000000000000000000000000000000000000000000000000000000000602082015250565b600061162d60218361146d565b9150611638826115d1565b604082019050919050565b6000602082019050818103600083015261165c81611620565b9050919050565b7f596f75206861766520616c726561647920766f74656400000000000000000000600082015250565b600061169960168361146d565b91506116a482611663565b602082019050919050565b600060208201905081810360008301526116c88161168c565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061170982610e76565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361173b5761173a6116cf565b5b600182019050919050565b61174f81610e76565b82525050565b600060608201905061176a6000830186611746565b6117776020830185610f25565b6117846040830184611746565b949350505050565b7f596f757220636f6d7065746974696f6e2063616e277420626520696e2074686560008201527f2070617374000000000000000000000000000000000000000000000000000000602082015250565b60006117e860258361146d565b91506117f38261178c565b604082019050919050565b60006020820190508181036000830152611817816117db565b9050919050565b7f596f757220636f6d7065746974696f6e20656e6420646174652063616e27742060008201527f6265206265666f72652074686520737461727420646174650000000000000000602082015250565b600061187a60388361146d565b91506118858261181e565b604082019050919050565b600060208201905081810360008301526118a98161186d565b9050919050565b50565b60006118c060008361146d565b91506118cb826118b0565b600082019050919050565b600060208201905081810360008301526118ef816118b3565b9050919050565b600081519050919050565b60005b8381101561191f578082015181840152602081019050611904565b60008484015250505050565b6000611936826118f6565b611940818561146d565b9350611950818560208601611901565b61195981610f54565b840191505092915050565b6000602082019050818103600083015261197e818461192b565b905092915050565b7f596f757220636f6d7065746974696f6e2063616e277420626520656d70747900600082015250565b60006119bc601f8361146d565b91506119c782611986565b602082019050919050565b600060208201905081810360008301526119eb816119af565b9050919050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e206a7560008201527f7279730000000000000000000000000000000000000000000000000000000000602082015250565b6000611a4e60238361146d565b9150611a59826119f2565b604082019050919050565b60006020820190508181036000830152611a7d81611a41565b9050919050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e20617460008201527f206c656173742034206f7074696f6e7300000000000000000000000000000000602082015250565b6000611ae060308361146d565b9150611aeb82611a84565b604082019050919050565b60006020820190508181036000830152611b0f81611ad3565b9050919050565b60038110611b2757611b266113ae565b5b50565b6000819050611b3882611b16565b919050565b6000611b4882611b2a565b9050919050565b611b5881611b3d565b82525050565b6000602082019050611b736000830184611b4f565b92915050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e20747960008201527f7065206f6620636f6d7065746974696f6e000000000000000000000000000000602082015250565b6000611bd560318361146d565b9150611be082611b79565b604082019050919050565b60006020820190508181036000830152611c0481611bc8565b9050919050565b6000611c1682610e76565b9150611c2183610e76565b9250828201905080821115611c3957611c386116cf565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680611c8657607f821691505b602082108103611c9957611c98611c3f565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302611d017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82611cc4565b611d0b8683611cc4565b95508019841693508086168417925050509392505050565b6000819050919050565b6000611d48611d43611d3e84610e76565b611d23565b610e76565b9050919050565b6000819050919050565b611d6283611d2d565b611d76611d6e82611d4f565b848454611cd1565b825550505050565b600090565b611d8b611d7e565b611d96818484611d59565b505050565b5b81811015611dba57611daf600082611d83565b600181019050611d9c565b5050565b601f821115611dff57611dd081611c9f565b611dd984611cb4565b81016020851015611de8578190505b611dfc611df485611cb4565b830182611d9b565b50505b505050565b600082821c905092915050565b6000611e2260001984600802611e04565b1980831691505092915050565b6000611e3b8383611e11565b9150826002028217905092915050565b611e54826118f6565b67ffffffffffffffff811115611e6d57611e6c610f65565b5b611e778254611c6e565b611e82828285611dbe565b600060209050601f831160018114611eb55760008415611ea3578287015190505b611ead8582611e2f565b865550611f15565b601f198416611ec386611c9f565b60005b82811015611eeb57848901518255600182019150602085019450602081019050611ec6565b86831015611f085784890151611f04601f891682611e11565b8355505b6001600288020188555050505b505050505050565b6000602082019050611f326000830184611746565b92915050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b6000611f9460268361146d565b9150611f9f82611f38565b604082019050919050565b60006020820190508181036000830152611fc381611f87565b9050919050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b600061200060208361146d565b915061200b82611fca565b602082019050919050565b6000602082019050818103600083015261202f81611ff3565b905091905056fea26469706673582212205e5d9b3170876768614a07c0471b8ed34968195759f4d14be7ce0ff2d8a8915a64736f6c63430008120033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063715018a61161005b578063715018a6146100ea5780638da5cb5b146100f4578063c23467df14610112578063f2fde38b146101425761007d565b80630f59e0451461008257806313a3deac1461009e57806333301ca0146100ce575b600080fd5b61009c60048036038101906100979190610eac565b61015e565b005b6100b860048036038101906100b39190610eec565b610522565b6040516100c59190610f34565b60405180910390f35b6100e860048036038101906100e391906112a3565b61061c565b005b6100f2610ac5565b005b6100fc610ad9565b6040516101099190611393565b60405180910390f35b61012c60048036038101906101279190610eec565b610b02565b6040516101399190611425565b60405180910390f35b61015c60048036038101906101579190611440565b610bc2565b005b6001805490508211156101a6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161019d906114f0565b60405180910390fd5b6101af82610c45565b6101ee576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016101e590611582565b60405180910390fd5b4260018381548110610203576102026115a2565b5b90600052602060002090600502016003015410610255576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161024c90611643565b60405180910390fd5b600015156002600084815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160149054906101000a900460ff161515146102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102f3906116af565b60405180910390fd5b600080600090505b60046000858152602001908152602001600020805490508110156103f85782600460008681526020019081526020016000208281548110610348576103476115a2565b5b906000526020600020906002020160000154036103e557600460008581526020019081526020016000208181548110610384576103836115a2565b5b906000526020600020906002020160010160008154809291906103a6906116fe565b91905055506004600085815260200190815260200160002081815481106103d0576103cf6115a2565b5b90600052602060002090600202016001015491505b80806103f0906116fe565b915050610304565b5060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff168152602001600115158152506002600085815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160000160146101000a81548160ff0219169083151502179055509050507f5106bdd0422307bd438b00b9333cf8b4c353184cc25ad2d3e73528a6b9f5792e8360018360405161051593929190611755565b60405180910390a1505050565b600060018054905082111561056c576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610563906114f0565b60405180910390fd5b61057582610c45565b6105b4576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016105ab90611582565b60405180910390fd5b6002600083815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160149054906101000a900460ff169050919050565b610624610d18565b428211610666576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161065d906117fe565b60405180910390fd5b8082106106a8576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161069f90611890565b60405180910390fd5b6040516020016106b7906118d6565b60405160208183030381529060405280519060200120856040516020016106de9190611964565b6040516020818303038152906040528051906020012003610734576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161072b906119d2565b60405180910390fd5b600286511015610779576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161077090611a64565b60405180910390fd5b6004845110156107be576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016107b590611af6565b60405180910390fd5b6040516020016107cd906118d6565b60405160208183030381529060405280519060200120836040516020016107f49190611b5e565b604051602081830303815290604052805190602001200361084a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161084190611beb565b60405180910390fd5b60006001808054905061085d9190611c0b565b905060006040518060a0016040528083815260200188815260200186600281111561088b5761088a6113ae565b5b815260200185815260200184815250905060018190806001815401808255809150506001900390600052602060002090600502016000909190919091506000820151816000015560208201518160010190816108e79190611e4b565b5060408201518160020160006101000a81548160ff02191690836002811115610913576109126113ae565b5b02179055506060820151816003015560808201518160040155505060005b88518110156109db57600360008481526020019081526020016000208982815181106109605761095f6115a2565b5b60200260200101519080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080806109d3906116fe565b915050610931565b5060005b8651811015610a835760006040518060400160405280898481518110610a0857610a076115a2565b5b60200260200101518152602001600081525090506004600085815260200190815260200160002081908060018154018082558091505060019003906000526020600020906002020160009091909190915060008201518160000155602082015181600101555050508080610a7b906116fe565b9150506109df565b507f344aaa0824cf73b2022c14c29679b30550254276677ba83187b03ca860f029de82604051610ab39190611f1d565b60405180910390a15050505050505050565b610acd610d18565b610ad76000610d96565b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600180549050821115610b4c576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610b43906114f0565b60405180910390fd5b4260018381548110610b6157610b606115a2565b5b9060005260206000209060050201600301541115610b825760009050610bbd565b4260018381548110610b9757610b966115a2565b5b9060005260206000209060050201600401541015610bb85760029050610bbd565b600190505b919050565b610bca610d18565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610c39576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c3090611faa565b60405180910390fd5b610c4281610d96565b50565b6000806000905060005b6003600085815260200190815260200160002080549050811015610d0e57610c75610e5a565b73ffffffffffffffffffffffffffffffffffffffff16600360008681526020019081526020016000208281548110610cb057610caf6115a2565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1603610cfb57600191505b8080610d06906116fe565b915050610c4f565b5080915050919050565b610d20610e5a565b73ffffffffffffffffffffffffffffffffffffffff16610d3e610ad9565b73ffffffffffffffffffffffffffffffffffffffff1614610d94576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610d8b90612016565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b610e8981610e76565b8114610e9457600080fd5b50565b600081359050610ea681610e80565b92915050565b60008060408385031215610ec357610ec2610e6c565b5b6000610ed185828601610e97565b9250506020610ee285828601610e97565b9150509250929050565b600060208284031215610f0257610f01610e6c565b5b6000610f1084828501610e97565b91505092915050565b60008115159050919050565b610f2e81610f19565b82525050565b6000602082019050610f496000830184610f25565b92915050565b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610f9d82610f54565b810181811067ffffffffffffffff82111715610fbc57610fbb610f65565b5b80604052505050565b6000610fcf610e62565b9050610fdb8282610f94565b919050565b600067ffffffffffffffff821115610ffb57610ffa610f65565b5b602082029050602081019050919050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061103c82611011565b9050919050565b61104c81611031565b811461105757600080fd5b50565b60008135905061106981611043565b92915050565b600061108261107d84610fe0565b610fc5565b905080838252602082019050602084028301858111156110a5576110a461100c565b5b835b818110156110ce57806110ba888261105a565b8452602084019350506020810190506110a7565b5050509392505050565b600082601f8301126110ed576110ec610f4f565b5b81356110fd84826020860161106f565b91505092915050565b600080fd5b600067ffffffffffffffff82111561112657611125610f65565b5b61112f82610f54565b9050602081019050919050565b82818337600083830152505050565b600061115e6111598461110b565b610fc5565b90508281526020810184848401111561117a57611179611106565b5b61118584828561113c565b509392505050565b600082601f8301126111a2576111a1610f4f565b5b81356111b284826020860161114b565b91505092915050565b600067ffffffffffffffff8211156111d6576111d5610f65565b5b602082029050602081019050919050565b60006111fa6111f5846111bb565b610fc5565b9050808382526020820190506020840283018581111561121d5761121c61100c565b5b835b8181101561124657806112328882610e97565b84526020840193505060208101905061121f565b5050509392505050565b600082601f83011261126557611264610f4f565b5b81356112758482602086016111e7565b91505092915050565b6003811061128b57600080fd5b50565b60008135905061129d8161127e565b92915050565b60008060008060008060c087890312156112c0576112bf610e6c565b5b600087013567ffffffffffffffff8111156112de576112dd610e71565b5b6112ea89828a016110d8565b965050602087013567ffffffffffffffff81111561130b5761130a610e71565b5b61131789828a0161118d565b955050604087013567ffffffffffffffff81111561133857611337610e71565b5b61134489828a01611250565b945050606061135589828a0161128e565b935050608061136689828a01610e97565b92505060a061137789828a01610e97565b9150509295509295509295565b61138d81611031565b82525050565b60006020820190506113a86000830184611384565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b600381106113ee576113ed6113ae565b5b50565b60008190506113ff826113dd565b919050565b600061140f826113f1565b9050919050565b61141f81611404565b82525050565b600060208201905061143a6000830184611416565b92915050565b60006020828403121561145657611455610e6c565b5b60006114648482850161105a565b91505092915050565b600082825260208201905092915050565b7f436f6d7065746974696f6e3a20566f74696e6720636f6d7065746974696f6e2060008201527f646f65736e277420657869737400000000000000000000000000000000000000602082015250565b60006114da602d8361146d565b91506114e58261147e565b604082019050919050565b60006020820190508181036000830152611509816114cd565b9050919050565b7f436f6d7065746974696f6e3a20446f65736e27742061636365737320766f746960008201527f6e67000000000000000000000000000000000000000000000000000000000000602082015250565b600061156c60228361146d565b915061157782611510565b604082019050919050565b6000602082019050818103600083015261159b8161155f565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f566f74696e6720636f6d7065746974696f6e2069736e2774206f70656e20796560008201527f7400000000000000000000000000000000000000000000000000000000000000602082015250565b600061162d60218361146d565b9150611638826115d1565b604082019050919050565b6000602082019050818103600083015261165c81611620565b9050919050565b7f596f75206861766520616c726561647920766f74656400000000000000000000600082015250565b600061169960168361146d565b91506116a482611663565b602082019050919050565b600060208201905081810360008301526116c88161168c565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061170982610e76565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361173b5761173a6116cf565b5b600182019050919050565b61174f81610e76565b82525050565b600060608201905061176a6000830186611746565b6117776020830185610f25565b6117846040830184611746565b949350505050565b7f596f757220636f6d7065746974696f6e2063616e277420626520696e2074686560008201527f2070617374000000000000000000000000000000000000000000000000000000602082015250565b60006117e860258361146d565b91506117f38261178c565b604082019050919050565b60006020820190508181036000830152611817816117db565b9050919050565b7f596f757220636f6d7065746974696f6e20656e6420646174652063616e27742060008201527f6265206265666f72652074686520737461727420646174650000000000000000602082015250565b600061187a60388361146d565b91506118858261181e565b604082019050919050565b600060208201905081810360008301526118a98161186d565b9050919050565b50565b60006118c060008361146d565b91506118cb826118b0565b600082019050919050565b600060208201905081810360008301526118ef816118b3565b9050919050565b600081519050919050565b60005b8381101561191f578082015181840152602081019050611904565b60008484015250505050565b6000611936826118f6565b611940818561146d565b9350611950818560208601611901565b61195981610f54565b840191505092915050565b6000602082019050818103600083015261197e818461192b565b905092915050565b7f596f757220636f6d7065746974696f6e2063616e277420626520656d70747900600082015250565b60006119bc601f8361146d565b91506119c782611986565b602082019050919050565b600060208201905081810360008301526119eb816119af565b9050919050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e206a7560008201527f7279730000000000000000000000000000000000000000000000000000000000602082015250565b6000611a4e60238361146d565b9150611a59826119f2565b604082019050919050565b60006020820190508181036000830152611a7d81611a41565b9050919050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e20617460008201527f206c656173742034206f7074696f6e7300000000000000000000000000000000602082015250565b6000611ae060308361146d565b9150611aeb82611a84565b604082019050919050565b60006020820190508181036000830152611b0f81611ad3565b9050919050565b60038110611b2757611b266113ae565b5b50565b6000819050611b3882611b16565b919050565b6000611b4882611b2a565b9050919050565b611b5881611b3d565b82525050565b6000602082019050611b736000830184611b4f565b92915050565b7f596f757220636f6d7065746974696f6e206d75737420636f6e7461696e20747960008201527f7065206f6620636f6d7065746974696f6e000000000000000000000000000000602082015250565b6000611bd560318361146d565b9150611be082611b79565b604082019050919050565b60006020820190508181036000830152611c0481611bc8565b9050919050565b6000611c1682610e76565b9150611c2183610e76565b9250828201905080821115611c3957611c386116cf565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680611c8657607f821691505b602082108103611c9957611c98611c3f565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302611d017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82611cc4565b611d0b8683611cc4565b95508019841693508086168417925050509392505050565b6000819050919050565b6000611d48611d43611d3e84610e76565b611d23565b610e76565b9050919050565b6000819050919050565b611d6283611d2d565b611d76611d6e82611d4f565b848454611cd1565b825550505050565b600090565b611d8b611d7e565b611d96818484611d59565b505050565b5b81811015611dba57611daf600082611d83565b600181019050611d9c565b5050565b601f821115611dff57611dd081611c9f565b611dd984611cb4565b81016020851015611de8578190505b611dfc611df485611cb4565b830182611d9b565b50505b505050565b600082821c905092915050565b6000611e2260001984600802611e04565b1980831691505092915050565b6000611e3b8383611e11565b9150826002028217905092915050565b611e54826118f6565b67ffffffffffffffff811115611e6d57611e6c610f65565b5b611e778254611c6e565b611e82828285611dbe565b600060209050601f831160018114611eb55760008415611ea3578287015190505b611ead8582611e2f565b865550611f15565b601f198416611ec386611c9f565b60005b82811015611eeb57848901518255600182019150602085019450602081019050611ec6565b86831015611f085784890151611f04601f891682611e11565b8355505b6001600288020188555050505b505050505050565b6000602082019050611f326000830184611746565b92915050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b6000611f9460268361146d565b9150611f9f82611f38565b604082019050919050565b60006020820190508181036000830152611fc381611f87565b9050919050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b600061200060208361146d565b915061200b82611fca565b602082019050919050565b6000602082019050818103600083015261202f81611ff3565b905091905056fea26469706673582212205e5d9b3170876768614a07c0471b8ed34968195759f4d14be7ce0ff2d8a8915a64736f6c63430008120033",
+  "devdoc": {
+    "author": "Colas Vincent",
+    "kind": "dev",
+    "methods": {
+      "addCompetition(address[],string,uint256[],uint8,uint256,uint256)": {
+        "details": "Administrator defines voting period, competition, voting panel and options. event CompetitionSessionRegistered when competition has been registered",
+        "params": {
+          "_endDate": "End date of voting session.",
+          "_idsOption": "List of ids in competition (film, actor, director).",
+          "_jury": "List of voting juries.",
+          "_startDate": "Voting session start date.",
+          "_title": "Competition title.",
+          "_typeCompetitions": "Defines the type of options."
+        }
+      },
+      "getVoterStatus(uint256)": {
+        "params": {
+          "_competitionId": "The voting competition identifier."
+        },
+        "returns": {
+          "_0": "True if msg.sender has already voted on this competition id."
+        }
+      },
+      "getVotingCompetitionStatus(uint256)": {
+        "params": {
+          "_competitionId": "The voting competition number."
+        },
+        "returns": {
+          "_0": "The voting competition status."
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      },
+      "voteOnCompetition(uint256,uint256)": {
+        "details": "Voting is only possible if the timestamp of the current block is between startTime and endTime of the session and if the voter's address is in the list. event Voted when jury has been voted",
+        "params": {
+          "_competitionId": "The voting competition on which the voter wants to vote.",
+          "_tokenIdOption": "The token id of the option chosen by the voter."
+        }
+      }
+    },
+    "title": "Management of Competition",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "CompetitionSessionRegistered(uint256)": {
+        "notice": "Event"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "addCompetition(address[],string,uint256[],uint8,uint256,uint256)": {
+        "notice": "Adds a voting session for a competition."
+      },
+      "getVoterStatus(uint256)": {
+        "notice": "Returns whether the user has voted on the voting competition."
+      },
+      "getVotingCompetitionStatus(uint256)": {
+        "notice": "Gets the voting competition status according to the current timestamp."
+      },
+      "voteOnCompetition(uint256,uint256)": {
+        "notice": "Allows you to vote for an option in a competition during a voting session."
+      }
+    },
+    "notice": "Smart contract to management digital Competition for the festival.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7,
+        "contract": "contracts/competition/Competitions.sol:Competitions",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 3405,
+        "contract": "contracts/competition/Competitions.sol:Competitions",
+        "label": "votingCompetitions",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_struct(CompetitionVotingSession)3397_storage)dyn_storage"
+      },
+      {
+        "astId": 3412,
+        "contract": "contracts/competition/Competitions.sol:Competitions",
+        "label": "votingCompetitionsVoters",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(Voter)3385_storage))"
+      },
+      {
+        "astId": 3417,
+        "contract": "contracts/competition/Competitions.sol:Competitions",
+        "label": "jurysByCompetition",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)"
+      },
+      {
+        "astId": 3423,
+        "contract": "contracts/competition/Competitions.sol:Competitions",
+        "label": "optionsByCompetition",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_uint256,t_array(t_struct(Option)3380_storage)dyn_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_struct(CompetitionVotingSession)3397_storage)dyn_storage": {
+        "base": "t_struct(CompetitionVotingSession)3397_storage",
+        "encoding": "dynamic_array",
+        "label": "struct Competitions.CompetitionVotingSession[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_struct(Option)3380_storage)dyn_storage": {
+        "base": "t_struct(Option)3380_storage",
+        "encoding": "dynamic_array",
+        "label": "struct Competitions.Option[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_enum(TypeCompetitions)3375": {
+        "encoding": "inplace",
+        "label": "enum Competitions.TypeCompetitions",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Voter)3385_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Competitions.Voter)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Voter)3385_storage"
+      },
+      "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_address)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_array(t_struct(Option)3380_storage)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Competitions.Option[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_struct(Option)3380_storage)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_mapping(t_address,t_struct(Voter)3385_storage))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(address => struct Competitions.Voter))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_struct(Voter)3385_storage)"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(CompetitionVotingSession)3397_storage": {
+        "encoding": "inplace",
+        "label": "struct Competitions.CompetitionVotingSession",
+        "members": [
+          {
+            "astId": 3387,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 3389,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "title",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 3392,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "typeCompetitions",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_enum(TypeCompetitions)3375"
+          },
+          {
+            "astId": 3394,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "startTime",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 3396,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "endTime",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "160"
+      },
+      "t_struct(Option)3380_storage": {
+        "encoding": "inplace",
+        "label": "struct Competitions.Option",
+        "members": [
+          {
+            "astId": 3377,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "tokenId",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 3379,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "voteCount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_struct(Voter)3385_storage": {
+        "encoding": "inplace",
+        "label": "struct Competitions.Voter",
+        "members": [
+          {
+            "astId": 3382,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "voter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 3384,
+            "contract": "contracts/competition/Competitions.sol:Competitions",
+            "label": "hasVoted",
+            "offset": 20,
+            "slot": "0",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
