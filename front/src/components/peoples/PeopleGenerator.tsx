@@ -16,7 +16,7 @@ const PeopleGenerator = () => {
     const [message, setMessage] = useState('')
     const [severity, setSeverity] = useState<AlertColor | undefined>('success')
 
-    const [type, setType]: any = useState(0);
+    const [type, setType]: any = useState(1);
     const [Lastname, setLastname]: any = useState('');
     const [Firstname, setFirstname]: any = useState('');
     const [Picture, setPicture]: any = useState('');
@@ -36,7 +36,7 @@ const PeopleGenerator = () => {
         let contract;
 
         // création de l'appel du mint
-        if (type === 1) {
+        if (type == 1) {
             contract = new ethers.Contract(contractsInterface.contracts.Actors.address, contractsInterface.contracts.Actors.abi, signer);
             transaction = await contract.mint(tokenURI);
         } else {
@@ -268,7 +268,7 @@ const PeopleGenerator = () => {
                 </div>
                 <div className="form-ligne">
                     <label htmlFor="type">Type :
-                        <select id="type" onChange={e => setType(e.target.value)} defaultValue={1}>
+                        <select id="type" onChange={e => setType(e.target.value)} >
                             <option value={1}>Acteur</option>
                             <option value={2}>Réalisateur</option>
                         </select>

@@ -266,7 +266,7 @@ const MovieGenerator = () => {
                     <label >Réalisateur :
                         <select name="type" onChange={e => setTokenIdDirector(e.target.value)}>
                             <option>Sélectionner un réalisateur</option>
-                            {directors.map((director: any, index: number) => {
+                            {directors && directors.length > 0 && directors.map((director: any, index: number) => {
                                 const idNumber = ethers.toNumber(director.id);
                                 return (
                                     <option key={`${idNumber}-${index}`} value={idNumber} >{director.Firstname} {director.Lastname}</option>
