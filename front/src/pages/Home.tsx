@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <article style={{textAlign: 'center'}}>
-            <h2>Bienvenue à l'incroyable saga du DevFest</h2>
+            <h2>Bienvenue à l'incroyable Saga du DevFest</h2>
             <div style={{width: '70%', textAlign: 'justify', display: 'flex', flexDirection: 'column', justifyContent: 'center', margin: 'auto'}}>
                 <p>Ce festival fictif a entièrement été créer dans le but d'une démonstration d'un cas d'usage de la blockchain,
                     Dans le cadre d'un atelier codeLabs du DevFest Nantes 2023. <br/>

@@ -6,13 +6,12 @@ import Jury from "../../pages/Jury.tsx";
 import Acteur from "../../pages/Acteur.tsx";
 import Film from "../../pages/Film.tsx";
 import Realisateur from "../../pages/Realisateur.tsx";
-import Account from "../../pages/Account.tsx";
 
 const useRouteMatch = (patterns: string[]) => {
     const { pathname } = useLocation();
 
-    for (let i = 0; i < patterns.length; i += 1) {
-        const pattern = patterns[i];
+    for (const element of patterns) {
+        const pattern = element;
         const possibleMatch = matchPath(pattern, pathname);
         if (possibleMatch !== null) {
             return possibleMatch;
@@ -45,7 +44,6 @@ const NavTab = () => {
                     <Route path="/acteur" element={<Box sx={{ paddingLeft: 3, paddingRight: 3, width: "100%" }}><Acteur /></Box>}></Route>
                     <Route path="/realisateur" element={<Box sx={{ paddingLeft: 3, paddingRight: 3, width: "100%" }}><Realisateur /></Box>}></Route>
                     <Route path="/film" element={<Box sx={{ paddingLeft: 3, paddingRight: 3, width: "100%" }}><Film /></Box>}></Route>
-                    <Route path="/account" element={<Box sx={{ paddingLeft: 3, paddingRight: 3, width: "100%" }}><Account /></Box>}></Route>
                 </Routes>
             </Box>
         </>

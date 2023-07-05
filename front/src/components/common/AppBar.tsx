@@ -17,7 +17,7 @@ function ResponsiveAppBar() {
     const [connectedUserAddress, setConnectedUserAddress] = useState('');
 
     async function accountNavigate() {
-        if(connectedUserAddress) navigate("/account");
+        if(connectedUserAddress) navigate("/admin");
     }
     const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElUser(event.currentTarget);
