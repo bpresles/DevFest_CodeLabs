@@ -6,7 +6,7 @@ interface CardCompetitionSelectProps{
 function CardCompetitionSelect({ Info, Picture }: CardCompetitionSelectProps){
 
     return (
-            <div style={{position: 'relative', height: '100px', width: '400px', margin: '1rem'}} >
+            <div style={{position: 'relative', height: '100px', width: '400px', margin: '1rem', cursor: 'pointer'}} >
                 <div style={{position: 'absolute', zIndex: 1}}>
                     <img src={Picture} alt="card" height='100' width='400'/>
                 </div>

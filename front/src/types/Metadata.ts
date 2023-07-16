@@ -47,3 +47,20 @@ export interface MovieMetadata {
         }
     ]
 }
+
+export interface CompetitionMetadata {
+    "description": string;
+    "external_url": string;
+    "image": string;
+    "name": string;
+    "attributes": [
+        {
+            "trait_type": "Title",
+            "value": string;
+        },
+        {
+            "trait_type": "Picture",
+            "value": string;
+        }
+    ]
+}

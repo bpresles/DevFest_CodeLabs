@@ -22,6 +22,7 @@ const AdministratorPage = () => {
                 <div>
                     <a className="choice_add" onClick={() => {setAddPeople(!addPeople); setAddMovie(false); setAddCompetition(false); }} >Ajout d'un acteurs ou réalisateurs</a>
                     <a className="choice_add" onClick={() => {setAddMovie(!addMovie); setAddPeople(false); setAddCompetition(false);} }>Ajout d'un nouveau film</a>
+                    <a className="choice_add" onClick={() => {setAddCompetition(!addCompetition); setAddPeople(false); setAddMovie(false); } }>Nouvelle competition</a>
                 </div>
                 {
                     addPeople
@@ -33,15 +34,11 @@ const AdministratorPage = () => {
                         ? <MovieGenerator />
                         : null
                 }
-                <br />
-                <div>
-                    <a className="choice_add" onClick={() => {setAddCompetition(!addCompetition); setAddPeople(false); setAddMovie(false); } }>Nouvelle competition</a>
-                    {
-                        addCompetition
-                            ? <CompetitionGenerator />
-                            : null
-                    }
-                </div>
+                {
+                    addCompetition
+                        ? <CompetitionGenerator />
+                        : null
+                }
                 <p></p>
             </article>
         )
