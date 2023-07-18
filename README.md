@@ -54,6 +54,12 @@ $ git clone https://github.com/BlockchainEtSociete/DevFest_CodeLabs.git
 ### Outils
 - [Node.js](https://nodejs.org/fr/download)
 - [Ganache](https://trufflesuite.com/ganache/)
+```json
+Config:
+Hostname : 127.0.0.1
+Port: 8545
+Network id : 5777
+```
 - [IPFS Desktop](https://docs.ipfs.tech/install/ipfs-desktop/)
 une petite config sera peu etre necessaire :
 ```json
@@ -100,11 +106,11 @@ une petite config sera peu etre necessaire :
 $ cd front
 $ npm install
 ```
-Modifier le fichier .env avec vos configurations :
+Modifier le fichier .env.dist par .env avec vos configurations :
 ```bash
-REACT_APP_IPFS_SCHEME="http"
-REACT_APP_IPFS_HOST="localhost"
-REACT_APP_IPFS_PORT="5001"
+REACT_APP_IPFS_SCHEME="YOUR_SCHEME"
+REACT_APP_IPFS_HOST="YOUR_HOST"
+REACT_APP_IPFS_PORT="YOUR_PORT"
 ```
 Pour lancer l'app:
 ```bash 
@@ -114,7 +120,7 @@ $ npm run dev
 <a name="hardhat"></a>
 ### Hardhat
 
-Modifier le fichier .env avec vos configurations :
+Modifier le fichier .env.dist par .env avec vos configurations :
 ```bash
 MNEMONIC="YOUR_MNEMONIC"
 INFURA_ID="AN_INFURA_ID"
@@ -124,6 +130,7 @@ ALCHEMY_ID="AN_ALCHEMY_ID"
 #### Compile smart contrat
 ```bash
 $ cd hardhat
+$ npm install
 $ npm run build
 ```
 
