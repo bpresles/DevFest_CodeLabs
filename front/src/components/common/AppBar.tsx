@@ -17,8 +17,13 @@ function ResponsiveAppBar() {
     const [connectedUserAddress, setConnectedUserAddress] = useState('');
 
     async function accountNavigate() {
+        if(connectedUserAddress) navigate("/account");
+    }
+
+    async function administrationNavigate(){
         if(connectedUserAddress) navigate("/admin");
     }
+
     const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElUser(event.currentTarget);
     };
@@ -72,8 +77,11 @@ function ResponsiveAppBar() {
                     open={Boolean(anchorElUser)}
                     onClose={handleCloseUserMenu}
                 >
-                    <MenuItem onClick={() => {accountNavigate();}}>
+                    <MenuItem onClick={() => {accountNavigate()}}>
                         <Typography textAlign="center">Mon Compte</Typography>
+                    </MenuItem>
+                    <MenuItem onClick={() => {administrationNavigate()}}>
+                        <Typography textAlign="center">Administration</Typography>
                     </MenuItem>
                     {
                         connectedUserAddress !== ''

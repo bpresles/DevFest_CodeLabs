@@ -85,7 +85,7 @@ const Realisateur = () => {
 
     return (
         <article>
-            <h2>Les Réalisateurs en compétition pour la parenthèse de cristal</h2>
+            <h2>Les Réalisateurs en compétition du devfest 2023</h2>
             <section style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
                 {!isLoading && directors && directors.length > 0 && directors.map((director: any, index: number) => (
                     <PeopleCard

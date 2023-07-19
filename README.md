@@ -34,7 +34,7 @@ front (Front UI)
 |
 +-- src (React sources)
 
-hardhat (Smart Contract)
+blockchain (Smart Contract)
 |
 +-- contracts (Solidity source file of the smart contract)
 |

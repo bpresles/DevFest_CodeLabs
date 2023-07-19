@@ -195,7 +195,7 @@ const Film = () => {
 
     return (
         <article>
-            <h2>Les Films en compétition pour l'accolade d'or</h2>
+            <h2>Les Films en compétition du devfest 2023</h2>
             <section>
                 {!isLoading && movies && movies.length > 0 && movies.map((film: any, index: number) => (
                     <CardFilm
