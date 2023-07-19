@@ -127,7 +127,7 @@ const Acteur = () => {
 
     return (
         <article>
-            <h2>Les Acteurs en compétition pour le chevrons d'argent</h2>
+            <h2>Les Acteurs en compétition du devfest 2023</h2>
 
             <section style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
                 {!isLoading && actors && actors.length > 0 && actors.map((actor: any, index: number) => (

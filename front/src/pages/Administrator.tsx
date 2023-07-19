@@ -4,7 +4,7 @@ import MovieGenerator from "../components/movies/MovieGenerator.tsx";
 import CompetitionGenerator from "../components/competition/CompetitionGenerator.tsx";
 import "../styles/account.css";
 
-const AdministratorPage = () => {
+const Administrator = () => {
     const [connectedUserAddress, setConnectedUserAddress] = useState('');
     const [addPeople, setAddPeople] = useState(false);
     const [addMovie, setAddMovie] = useState(false);
@@ -43,4 +43,4 @@ const AdministratorPage = () => {
             </article>
         )
 }
-export default AdministratorPage;
+export default Administrator;
