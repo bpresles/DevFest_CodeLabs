@@ -1,0 +1,32 @@
+.form-ligne{
+    margin: 1rem;
+}
+.form-ligne input {
+    margin-left: 1rem;
+}
+select {
+// A reset of styles, including removing the default dropdown arrow
+appearance: none;
+// Additional resets for further consistency
+background-color: transparent;
+    padding: 0 1em 0 0;
+    margin-left: 1rem;
+    width: 12rem;
+}
+button{
+    background-color: #f2c684;
+    color: #fff;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin: 1rem;
+}
+.form-description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+textarea{
+    margin: auto;
+}

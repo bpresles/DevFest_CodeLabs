@@ -1,0 +1,11 @@
+.choice_add{
+    color: #f2c684;
+    margin: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: #f2c684 2px solid;
+}
+.choice_add:hover{
+    background-color: #f2c684;
+    color: #fff;
+}
